@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name":"GitHub Since Commit Diff",
+    "description":"",
+    "version":"1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*"],
+            "js": ["github_since_commit_diff.js"]
+        } 
+    ],
+    "permissions": [
+        "https://github.com/*"
+    ]
+}
