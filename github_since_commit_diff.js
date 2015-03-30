@@ -10,7 +10,7 @@ function get_last_commit_hash() {
 }
 
 function decorate_commit_hashes() {
-    var commit_hashes = document.querySelectorAll('.timeline-commits tr.commit .commit-meta code a');
+    var commit_hashes = get_commit_hashes();
     var last_commit_hash = get_last_commit_hash();
     var url = document.URL.match('https://github.com/[^/]+/[^/]+');
     [].forEach.call(commit_hashes, function(hash_anchor, index) {
@@ -32,4 +32,3 @@ function decorate_commit_hashes() {
 window.setTimeout(function() {
     decorate_commit_hashes();
 }, 1000);
-
