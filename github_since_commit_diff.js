@@ -25,7 +25,8 @@ function decorate_commit_hashes() {
         diff_since_button.href = href;
         diff_since_button.innerHTML = 'Diff since';
         
-        hash_anchor.parentNode.previousElementSibling.appendChild(diff_since_button);
+        var commit_meta = hash_anchor.parentNode.parentNode;
+        commit_meta.insertBefore(diff_since_button, commit_meta.firstChild);
     });
 }
 
